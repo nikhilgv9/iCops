@@ -1,0 +1,103 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<jsp:useBean id="lg" class="login.Login" scope="request"/>
+<jsp:useBean id="msg" class="communication.Messages" scope="page"/>
+<jsp:setProperty name="msg" property="*" />
+<jsp:setProperty name="lg" property="*" />
+<%
+lg.init(request.getSession());
+if(lg.checkSession()!=0)
+{
+    if(request.getParameter("box")!=null)
+        {
+        if(request.getParameter("box").equals("inbox"))
+            {
+        %>
+        <input type="hidden" id="pageno" value="0"/>
+        Sort By
+        <select id="Select1" >
+            <option>Time</option>
+        </select>
+        <br />
+        <a href="javascript:deletemsg();load('inbox')">Delete</a>
+        <a href="javascript:reply()">Reply</a>
+        <a href="javascript:forward()">Forward</a>
+        <a href="javascript:selectAll()">Select All</a>
+        <div id="msgdiv">
+        </div>
+        <br />
+        <a href="javascript:deletemsg();load('inbox')">Delete</a>
+        <a href="javascript:reply()">Reply</a>
+        <a href="javascript:forward()">Forward</a>
+        <a href="javascript:selectAll()">Select All</a>
+        <%}
+        else if(request.getParameter("box").equals("sent"))
+            {
+        %>
+        <input type="hidden" id="pageno" value="0"/>
+        Sort By
+        <select id="Select1" >
+            <option>Time</option>
+        </select>
+        <br />
+        <a href="javascript:deletemsg();load('sent')">Delete</a>
+        <a href="javascript:forward()">Forward</a>
+        <a href="javascript:selectAll()">Select All</a>
+        <div id="msgdiv">
+        </div>
+        <br />
+        <a href="javascript:deletemsg();load('sent')">Delete</a>
+        <a href="javascript:forward()">Forward</a>
+        <a href="javascript:selectAll()">Select All</a>
+        <%
+        }
+        else if(request.getParameter("box").equals("trash")){%>
+        <input type="hidden" id="pageno" value="0"/>
+        Sort By
+        <select id="Select1" >
+            <option>Time</option>
+        </select>
+        <br />
+        <a href="javascript:deleteforever();load('trash')">Delete Forever</a>
+        <a href="javascript:restoremsg();load('trash')">Restore</a>
+        <a href="javascript:selectAll()">Select All</a>
+        <div id="msgdiv">
+        </div>
+        <br />
+        <a href="javascript:deleteforever();load('trash')">Delete Forever</a>
+        <a href="javascript:restoremsg();load('trash')">Restore</a>
+        <a href="javascript:selectAll()">Select All</a>
+          <%}
+        else if(request.getParameter("box").equals("drafts"))
+        {%>
+        <input type="hidden" id="pageno" value="0"/>
+            Sort By
+        <select id="Select1" >
+            <option>Time</option>
+        </select>
+        <br />
+            <a href="javascript:deletemsg();load('drafts')">Discard</a>
+            <a href="javascript:forward()">Send</a>
+            <a href="javascript:selectAll()">Select All</a>
+            <div id="msgdiv">
+            </div>
+            <br />
+             <a href="javascript:deletemsg();load('drafts')">Discard</a>
+            <a href="javascript:forward()">Send</a>
+            <a href="javascript:selectAll()">Select All</a>
+        <%}
+        }
+    else if(request.getParameter("get")!=null)
+            out.print(msg.prepMsg(lg.getId(), request.getParameter("sortby"),lg.checkSession(),request.getParameter("get"),request.getParameter("page")));
+
+    else if(request.getParameter("open")!=null)
+            out.print(msg.openMsg(lg.getId(), request.getParameter("no"),lg.checkSession(),request.getParameter("open")));
+
+    else if(request.getParameter("delete")!=null)
+        out.print(msg.deleteMessage(lg.getId(), request.getParameter("delete"),lg.checkSession()));
+    else if(request.getParameter("deleteforever")!=null)
+        out.print(msg.deleteForever(lg.getId(), request.getParameter("deleteforever"),lg.checkSession()));
+    else if(request.getParameter("restore")!=null)
+        out.print(msg.restoreMessage(lg.getId(), request.getParameter("restore"),lg.checkSession()));
+        
+}
+%>

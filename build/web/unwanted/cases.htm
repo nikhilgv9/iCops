@@ -1,0 +1,170 @@
+<%@page language="java" import="java.sql.*"%>
+<jsp:useBean id="lg" class="login.Login" scope="request"/>
+<jsp:setProperty name="lg" property="*" />
+<%
+lg.init(request.getSession());
+if(lg.checkSession()==1)
+{
+%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="SHORTCUT ICON" href="images/icon.ico"/>
+<title>icops</title>
+<script type="text/javascript">
+    function openmsg(x)
+    {
+       window.location="fir.jsp?id="+x;
+    }
+    function init(x)
+    {
+        var d=new Date;
+        var xmlhttp=new XMLHttpRequest();
+        var time=d.getTime();
+        url="getcomp.jsp?box="+x+"&time="+time;
+        xmlhttp.open("GET",url,false);
+        xmlhttp.send();
+        document.getElementById("comp").innerHTML=xmlhttp.responseText;
+    }
+    function prevnext(x,page)
+    {
+        document.getElementById("pageno").value=page;
+        getmsg(x,document.getElementById("Select1").value,page);
+    }
+    function get(x,page)
+    {
+        var d=new Date;
+        var xmlhttp=new XMLHttpRequest();
+        var time=d.getTime();
+        url="getcomp.jsp?get="+x+"&page="+page+"&time="+time;
+        xmlhttp.open("GET",url,false);
+        xmlhttp.send();
+        document.getElementById("compdiv").innerHTML=xmlhttp.responseText;
+    }
+    function takeaction(x)
+    {
+        url="fir.jsp?id="+x;
+        window.location=url;
+    }
+    function load(x)
+    {
+        init(x);
+        get(x,document.getElementById("pageno").value);
+    }
+</script>
+<meta http-equiv="Content-Language" content="English" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+</head>
+<body onload="load('cases')">
+<div class="rightmost">
+<i><a href="logout.jsp">logout</a></i>
+</div>
+<div id="wrap">
+<div id="header">
+<div class="headings">
+<h1><a href="#">iCops</a></h1>
+<br />
+<h2>Adminstrator...</h2>
+</div>
+<div class="nav">
+<ul>
+<li><a href="home-updates.jsp">Home</a></li> 
+<li><a href="hierarchy-create.jsp">Hierarchy</a></li>
+<li><a href="posts-create.jsp">Posts</a></li>
+<li><a href="users.jsp">Users</a></li>
+<li class="act"><a href="#">Complaints</a></li>
+<li><a href="messages.jsp">Messages</a></li>
+</ul>
+</div>
+</div>
+
+<div id="left">
+
+<h1><a href="#">Welcome Administrator</a></h1>
+<div class="tab">
+<ul>
+<li><a href="complaints.jsp">Petitions</a></li> 
+<li><a href="informations.jsp">Informations</a></li>
+<li class="act"><a href="#">Cases</a></li>
+</ul>
+</div>
+<br />
+<br />
+<div id="comp">
+    
+</div>
+
+</div>
+
+<div id="right">
+
+<div class="adleft">
+<img id="propic" alt="icon" src="images/Administrator-icon.png" />
+</div>
+<div class="proright">
+<ul>
+<li><a href="#">Profile...</a></li> 
+<li><a href="#">Settings...</a></li> 
+<li><a href="#">Chats...</a></li> 
+<li><a href="#">Schedules...</a></li>
+</ul>
+</div>
+
+<div style="clear: both;"> </div>
+
+<div class="latestarticles">
+<h2>Latest Alerts</h2>
+<ul>
+<li><a href="#">Wanted...</a></li> 
+<li><a href="#">Missing Person...</a></li> 
+<li><a href="#">Road Accidents...</a></li> 
+<li><a href="#">Other Alerts...</a></li>
+</ul>
+</div>
+
+<div class="menuleft">
+<h2>Users :</h2>
+<ul>
+<li><a href="#">State</a></li>
+<li><a href="#">Police Officers</a></li> 
+<li><a href="#">Polce Stations</a></li> 
+<li><a href="#">Citizens</a></li> 
+<li><a href="#">Guests</a></li> 
+</ul>
+
+<h2>Updates</h2>
+<ul>
+<li><a href="#">January 2007</a></li> 
+<li><a href="#">February 2007</a></li> 
+<li><a href="#">March 2007</a></li> 
+<li><a href="#">April 2007</a></li>
+<li><a href="#">May 2007</a></li> 
+<li><a href="#">June 2007</a></li> 
+<li><a href="#">July 2007</a></li> 
+<li><a href="#">August 2007</a></li> 
+<li><a href="#">September 2007</a></li>
+<li><a href="#">October 2007</a></li>
+<li><a href="#">November 2007</a></li>
+<li><a href="#">December 2007</a></li>
+</ul>
+</div>
+
+<div class="menuright">
+<img src="images/sidepic.jpg" alt="x" />
+</div>
+</div>
+<div style="clear: both;"> </div>
+<div id="footer">
+Designed by <a href="http://www.free-css-templates.com/">Government Engineering College</a>, Thanks to <a href="http://www.openwebdesign.org/">Our Department</a>
+</div>
+</div>
+</body>
+</html>
+<%
+}
+else{
+    response.sendRedirect("login.jsp");
+}
+%>

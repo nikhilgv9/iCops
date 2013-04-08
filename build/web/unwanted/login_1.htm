@@ -1,0 +1,294 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <link href="login_files/style.css" rel="stylesheet" type="text/css" />
+    <link href="login_files/index.css" rel="stylesheet" type="text/css" />
+
+    <script language="javascript" type="text/javascript" src="login_files/accountList.js"></script>
+
+    <script language="javascript" type="text/javascript" src="login_files/hiliteLink.js"></script>
+
+    <script language="javascript" type="text/javascript" src="login_files/loginTrouble.js"></script>
+    
+    <script language="JavaScript" type="text/javascript" src="login_files/common.js"></script>
+
+    <script language="javascript" type="text/javascript" src="login_files/virtualkb.js"></script>
+    
+    <script language="javascript" type="text/javascript">
+        var message = "For security reasons this function is not allowed here.";
+        document.oncontextmenu = new Function("alert(message);return false;")
+    </script>
+
+    <script language="javascript" type="text/javascript">
+
+        function init() {
+
+            document.getElementById("chkbox").checked = false;
+            document.getElementById("username").focus();
+            constructKeyboard(false);
+        }
+    </script>
+
+    <title>iCops Login</title>
+</head>
+<body onload="init()">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tbody>
+        <tr>
+        <td rowspan="3" align="left" height="72" valign="top">&nbsp;
+            <img alt="" src="login_files/logo.png" /></td>
+        <td id="top_1" valign="middle" width="12">
+            <img src="login_files/right_link_curve.gif" height="24" width="12">
+        </td>
+        <td class="topNavText" id="top_1" nowrap="nowrap" height="24"
+            valign="middle"><a href="#" onclick="window.open('/sbijava/aboutus.html','aboutus','width=780, height=500, status=1, scrollbars=1, location=0')"
+            accesskey="3" title="Press Alt + 3 and Enter">About iCops </a>
+            | <a href="#" onclick="window.open('/sbijava/registrationforms_0.html','aboutus','width=780,
+ height=500, status=1, scrollbars=1, location=0')" accesskey="4" title="Press Alt + 4 and Enter">
+            Register as Guest</a> </td>
+        <td rowspan="2" align="right" valign="top" width="87">&nbsp;
+        
+        </td>
+        </tr>
+        <tr>
+        <td colspan="2" align="center" height="38">&nbsp; </td>
+        </tr>
+        <tr>
+        <td colspan="3" class="wlcmname" align="center" height="10">&nbsp;
+        </td>
+        </tr>
+    </tbody>
+    </table>
+    <table class="headerTopNav202" border="0" cellpadding="0" cellspacing="0"
+    width="100%">
+    <tbody>
+        <tr height="22">
+        <td width="30"><a href="" class="topnavlink">
+        Home</a> </td>
+        <td class="topNavTextNormal" width="158"><a href="#" onclick="window.open('/sbijava/productsandservices.html','productservice','width=780,
+ height=500, status=1, scrollbars=1, location=0')">Products &amp; Services</a>
+        </td>
+        <td class="topNavTextNormal" width="112"></td>
+        <td class="topNavTextNormal" width="112"></td>
+        <td class="topNavTextNormal" width="140">&nbsp; </td>
+        <td class="topNavTextNormal" width="142">&nbsp; </td>
+        <td>&nbsp; </td>
+        <td width="22">&nbsp; </td>
+        <td width="52">&nbsp; </td>
+        </tr>
+    </tbody>
+    </table>
+    <div id="logonBodyContent" style="">
+        <form name="quickLookForm" method="post" autocomplete="off">
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        Your user name and password are highly confidential. Never part
+        with them. iCops will never ask for this information.
+        <tbody>
+            <tr>
+            <td cope="col" class="maincurvecls" width="50%">
+                <h1 class="pageTitleHeaderLog">
+                    <a name="main"></a>&nbsp;</h1>
+            </td>
+            <td class="maincurvecls" scope="col" width="50%">
+                <table id="tblPageContent" align="right" border="0" cellpadding="0"
+                cellspacing="0" width="50%">
+                <tbody>
+                    <tr>
+                    <td class="innerPageTopLeftBGWithText" align="right" nowrap="nowrap"
+                        height="31" valign="middle" width="81%"></td>
+                    <td align="right" height="31" valign="middle" width="19%">&nbsp;
+                    </td>
+                    </tr>
+                </tbody>
+                </table>
+            </td>
+            </tr>
+            <tr>
+            <td colspan="2" scope="row" style="border-left: 0pt none;" class="pageContentBG"
+                align="left" valign="top">
+                <table class="tblbrdr" align="center" border="0" cellpadding="0"
+                cellspacing="0" width="90%">
+                <tbody>
+                    <tr>
+                    <td colspan="2">
+                        <div id="loginpage" style="">
+                            <table align="center">
+                            <tbody>
+                                <tr>
+                                <!--Login Section Starts -->
+                                <td class="vkb_aligntop" width="58%" style="height: 281px">
+                                    <form method="post" action="">
+                                    <table class="vkb_tbl" border="0" cellpadding="0" cellspacing="0"
+                                    width="100%">
+                                    <tbody>
+                                        <tr>
+                                        <td colspan="3">
+                                            <p class="vkb_login_heading">
+                                                To access your account...<br>
+                                                <span>Login</span></p>
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                        <td nowrap="nowrap" width="22%"><strong>User Name * </strong>
+                                        </td>
+                                        <!-- CR 2614-Starts-Added onfocus and onblur events-->
+                                        <td width="78%">
+                                            <input value="" autocomplete="off" name="usrname" id="username"
+                                                tabindex="1" size="20" maxlength="20" onfocus="disableautocompletion(this.id);getFocus(this.id);"
+                                                onblur="disableautocompletion(this.id);" oncopy="return false"
+                                                onpaste="return false" onkeypress="return disableCtrlKeyCombination(event);"
+                                                onkeydown="return disableCtrlKeyCombination(event);" type="text">
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                        <td><strong>Password * </strong></td>
+                                        <td nowrap="nowrap">
+                                            <input name="passwd" id="label2" tabindex="2" title="password"
+                                                size="20" onfocus="disableautocompletion(this.id);getFocus(this.id);"
+                                                onblur="disableautocompletion(this.id);" oncopy="return false"
+                                                onpaste="return false" onkeypress="return 
+disableCtrlKeyCombination(event);" onkeydown="return 
+disableCtrlKeyCombination(event);" type="password">
+                                        </td>
+                                        <!-- CR 2614 ends -->
+                                        </tr>
+                                        <tr>
+                                        <td>&nbsp; </td>
+                                        <td>
+                                            <input checked="checked" id="chkbox" onclick="constructKeyboard();"
+                                                type="checkbox">
+                                            Enable Virtual Keyboard </td>
+                                        </tr>
+                                        <tr>
+                                        <td></td>
+                                        <td class="button_row_left" nowrap="nowrap">
+                                            <input class="button_class" value="Login" title="Login" id="Button2"
+                                                tabindex="3" type="submit">
+                                            &nbsp;
+                                            <input name="Cancel2" class="button_Class" value="Reset" title="Reset"
+                                                id="Cancel2" tabindex="4" onclick="constructKeyboard()" type="reset">
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                        <td colspan="2" class="vkb_link">For better security use the Online
+                                            Virtual Keyboard to login. </td>
+                                        </tr>
+                                    </tbody>
+                                    </table>
+                                </td>
+                                <!--Login Section Ends -->
+                                <!--VKB Section Ends -->
+                                <td class="vkb_aligntop" align="right" width="42%" 
+                                        style="height: 281px">
+                                    <table class="vkb_content">
+                                    <tbody>
+                                        <tr>
+                                        <td class="kbd_heading">Online Virtual Keyboard </td>
+                                        </tr>
+                                        <tr>
+                                        <td><span id="kbplaceholder">
+                                            <!--keybd comes here -->
+                                        </span></td>
+                                        </tr>
+                                    </tbody>
+                                    </table>
+                                    <br>
+                                </td>
+                                </tr>
+                                <tr>
+                                <td colspan="2">
+                                    <table align="center" border="0" cellpadding="0" cellspacing="0"
+                                    width="75%">
+                                    <tbody>
+                                        <tr>
+                                        <td class="error_border"><b><span class="imptant">Important:</span>
+                                            iCops never sends email for getting user information. Please
+                                            report immediately if you receive any e-mail purported to be
+                                            originated by iCops to gather your Username or Password or any
+                                            other personal information. This may be a phishing mail.<br>
+                                        </b></td>
+                                        </tr>
+                                    </tbody>
+                                    </table>
+                                </td>
+                                </tr>
+                                <tr align="center">
+                                <td colspan="3" class="loginSubLinks">
+                                    <br>
+                                    <a href="#" onclick="window.open('troubleloginhome.htm?bankCode=0','aboutus','width=780,
+ height=500 ,status=1, scrollbars=1, location=0')" tabindex="6">Trouble logging in<a
+ href="">FAQ</a> | <a href="">
+ <b>About Phishing</b></a> | <a href="">
+ Report Phishing</a> </td>
+                                </tr>
+                                <tr align="center">
+                                <td colspan="3" style="height: 51px">
+                                </td>
+                                </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td colspan="3">
+                        <div style="display: none;" id="loading">
+                            <table align="center" border="0" cellpadding="6" cellspacing="0">
+                            <tbody>
+                                <tr>
+                                <td height="190">
+                                    <img src="login_files/app_loading.gif">
+                                </td>
+                                </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                                    <table width="63%">
+                                    <tbody>
+                                        <tr>
+                                        <td align="right" valign="middle">&nbsp; </td>
+                                        <td class="formDatanobrdr" align="left">&nbsp; </td>
+                                        <td class="formDatanobrdr" align="left">&nbsp; </td>
+                                        </tr>
+                                    </tbody>
+                                    </table>
+                    </td>
+                    </tr>
+                </tbody>
+                </table>
+                <div style="" id="logonRemark">
+                    <br>
+                    <table align="center" border="0" cellpadding="0" cellspacing="0"
+                    width="90%">
+                    <tbody>
+                        <tr>
+                        <td class="notecls">
+                        Mandatory fields are marked with an asterisk (*)
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+                <br>
+            </td>
+            </tr>
+        </tbody>
+        </table>
+        </form>
+    </div>
+    <br>
+    <table id="tblContainer" border="0" cellpadding="0" cellspacing="0"
+    width="100%">
+    <tbody>
+        <tr>
+        <td class="footerText" height="25" valign="middle">©&nbsp;Copyright
+            iCops 2010 </td>
+        <td class="footerText" height="25" valign="middle">
+            <div align="right">
+                <a href="#" onclick="window.open('/sbijava/Privacy_Statement.html','aboutus','width=780,
+ height=500, status=1, scrollbars=1, location=0')">Privacy Statementtion Terms
+                of Use</a></div>
+        </td>
+        </tr>
+    </table>
+</body>
+</html>

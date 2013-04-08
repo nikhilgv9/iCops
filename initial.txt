@@ -1,0 +1,2 @@
+STATE	NULL	KER	0	Kerala State	0
+NULL	admin	admin	admin	0	  	../starts/admin.png	1

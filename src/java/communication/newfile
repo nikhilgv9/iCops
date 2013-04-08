@@ -1,0 +1,45 @@
+All the possible testing methods done for the project
+
+Testing in small
+Testing in small means testing the software module wise. The module testing of each class is done as below.
+
+Every class contains a main function attached to it. Its provided for the self testing of the module. The main function makes the class runnable. The main method contains different provisions for testing the module. The main method tests the class by checking all its functions are working.
+Slight changes to the original code are made to enable module testing.
+
+In Tree class, which is used to generate tree view of police hierarchy.(It has been described in Coding section). It contains a function getJs() used to produce the javascript for generating tree view.  The output of getJs() function is a string. It can be verified by running the class alone. Because it contains a main function like,
+
+public static void main(String args[])
+    \{
+        Tree t=new Tree();
+        System.out.print(t.getJs());
+    \\}
+
+But for Db class the main is little more complicated,
+
+public static void main(String args[]) \{
+
+            Db d = new Db();
+            d.selectTable(\textquotedblleftPROFILE\textquotedblleft);
+            List\textlessString> p=new ArrayList\textlessString>();
+            p.add(\textquotedblleft10\textquotedblleft);
+            p.add(null);p.add(null);p.add(null);p.add(null);p.add(null);p.add(null);
+            p.add(null);p.add(null);p.add(null);p.add(null);p.add(null);p.add(null);
+            System.out.println(d.makequery(p));
+    \\}
+
+It checks the correct working of the makequery() function in the Db class.
+A statement coverage criteria is followed, in which its ensured that’s each statement in the code is executed at least once.
+
+But there are a lot of modules for which individual testing is not possible. For example many methods need a HttpRequest  object or a Session object. These cannot be supplied to the function during individual testing. So testing in small of  such modules are difficult.
+
+
+
+
+Testing in large
+
+The entire system is tested in different aspects. The reliability was the first concern checked. It is found that system is reliable in most contexts. But becomes unreliable in case user trying to execute javascript directly on browser. Giving unwanted parameter in http requests etc.
+
+Now the system is found to be vulnerable since and one user can see some of the data about other user. This problem is resolved al all points where it is found.( For example in case of citizen who have no access to chat was found to be able to chat by executing javascript command on browser address bar. But this problem was solved later. We still believe that there are a lot of such unresolved problems in the system. Because the application was initially developed with same view for all users. The restricted views where enforced later.
+
+The overload test was done on, especially about the database server.  Large number of transaction requests was given to the application. It is found that application can do a maximum of 20 transactions per ten seconds. A transaction can be creation of a new user, retrieving a message, for an update query etc.
+A large realistic testing of the system was done by connecting many systems(6 systems) in LAN. And one of the systems was made webserver. Different users were logged in from different systems in different browsers. Many of the short comings of the system was revealed in such a testing.

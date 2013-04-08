@@ -1,0 +1,15 @@
+1 - admin
+2- officer
+3 police station
+4 citizen
+5 guest
+
+1-case given
+2-action taken
+3-progressing
+4-closed
+
+0-registered
+1.investigating
+2. inprogress
+3. closed

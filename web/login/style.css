@@ -1,0 +1,274 @@
+BODY {
+	MIN-WIDTH: 778px;
+        MARGIN: 0px;
+        FONT: 80% Arial, Helvetica, sans-serif;
+        COLOR: #000;
+        BACKGROUND-COLOR:  #E0F0FE
+}
+
+A{
+    COLOR: #fff;
+}
+
+A:visited {
+	COLOR: #fff;
+}
+A:hover {
+        COLOR: #fff;
+	TEXT-DECORATION: underline
+}
+A:active {
+	COLOR: #fff;
+}
+
+
+.topnavtext {
+    PADDING-LEFT: 10px;
+    BACKGROUND: #53acbc;
+    FONT: 0.9em Arial,Helvetica,sans-serif;
+    COLOR: #fff;
+    TEXT-DECORATION: none
+}
+
+.topnavtextnormal {
+    FONT: bold 80% Arial,Helvetica,sans-serif;
+    COLOR: #fff; TEXT-ALIGN: center;
+    TEXT-DECORATION: none
+}
+.topnavtextnormal A {
+    COLOR: #fff;
+    TEXT-DECORATION: none
+}
+.topnavtextnormal A:hover {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 100%;
+    BACKGROUND: #51adc2;
+    PADDING-BOTTOM: 2px;
+    WIDTH: 90%;
+    COLOR: #fff;
+    PADDING-TOP: 3px;
+    HEIGHT: 150%;
+    TEXT-DECORATION: none
+}
+.maincurvecls {
+    BORDER-TOP: #78797b 1px solid;
+    BACKGROUND: #f4f8f9
+}
+.innerpagetopleftbgwithtext {
+    PADDING-LEFT: 5px;
+    FONT: 80% Arial,Helvetica,sans-serif;
+    CURSOR: default;
+    COLOR: #000;
+    TEXT-DECORATION: none
+}
+.pagecontentbg {
+    BORDER-RIGHT: 0px solid;
+    BORDER-TOP: 0px solid;
+    BACKGROUND: #f4f8f9;
+    BORDER-LEFT: #78797b 1px solid;
+    BORDER-BOTTOM: #78797b 1px solid;
+    HEIGHT: 100%
+}
+.tblbrdr {
+    BORDER-RIGHT: #a9a9a9 1px solid;
+    BORDER-TOP: #a9a9a9 1px solid;
+    BACKGROUND: #fff;
+    BORDER-LEFT: #a9a9a9 1px solid;
+    BORDER-BOTTOM: #a9a9a9 1px solid
+}
+
+.vkb_aligntop {
+	PADDING-RIGHT: 6px;
+        PADDING-LEFT: 50px;
+        PADDING-BOTTOM: 0px;
+        PADDING-TOP: 20px
+}
+
+.vkb_tbl {
+	PADDING-RIGHT: 2px;
+	PADDING-LEFT: 2px;
+	PADDING-BOTTOM: 2px;
+	MARGIN: 0px;
+	FONT: 80% Arial, Helvetica, sans-serif;
+	VERTICAL-ALIGN: top;
+	PADDING-TOP: 2px;
+	text-align: center;
+}
+.vkb_tbl TD {
+	PADDING-RIGHT: 2px;
+        PADDING-LEFT: 2px;
+        PADDING-BOTTOM: 2px;
+        PADDING-TOP: 4px
+}
+
+.vkb_login_heading {
+	FONT: 100% Arial, Helvetica, sans-serif
+}
+.vkb_login_heading SPAN {
+	PADDING-RIGHT: 0px;
+        PADDING-LEFT: 0px;
+        FONT-WEIGHT: bolder;
+        FONT-SIZE: 140%;
+        PADDING-BOTTOM: 0px;
+        MARGIN: 0px;
+        COLOR: #407cb9;
+        PADDING-TOP: 0px
+}
+.button_row_left {
+	PADDING-LEFT: 15px;
+        VERTICAL-ALIGN: middle;
+        HEIGHT: 40px;
+        TEXT-ALIGN: left
+}
+
+.button_class {
+	BORDER-RIGHT: #a1a1a1 1px solid;
+        PADDING-RIGHT: 1px;
+        BORDER-TOP: #a1a1a1 1px solid;
+        PADDING-LEFT: 1px;
+        FONT: bold 11px Tahoma,Verdana,Arial,Helvetica,sans-serif;
+        BORDER-LEFT: #a1a1a1 1px solid; WIDTH: auto; CURSOR: pointer;
+        BORDER-BOTTOM: #a1a1a1 1px solid; HEIGHT: 20px;
+        TEXT-ALIGN: center
+}
+
+.vkb_link {
+	PADDING-RIGHT: 5px;
+        BORDER-TOP: #ccc 1px dashed;
+        PADDING-LEFT: 5px;
+        PADDING-BOTTOM: 5px;
+        FONT: 100% Arial, Helvetica, sans-serif;
+        COLOR: #2a6097;
+        PADDING-TOP: 5px
+}
+.vkb_link A {
+	COLOR: #2a6097;
+        TEXT-DECORATION: none
+}
+.vkb_link A:hover {
+	TEXT-DECORATION: underline
+}
+
+.error_border {
+	BORDER-TOP: #595959 0px solid;
+        COLOR: #0f4bc4;
+        BORDER-BOTTOM: #595959 2px solid;
+        FONT-FAMILY: Arial, Helvetica, sans-serif;
+        BACKGROUND-COLOR: #fff;
+        TEXT-ALIGN: left
+}
+
+.loginsublinks {
+        FONT: 85% Arial,Helvetica,sans-serif;
+        COLOR: #003399
+}
+.loginsublinks A {
+        FONT: 85% Arial,Helvetica,sans-serif;
+        COLOR: #003399;
+        TEXT-DECORATION: underline
+}
+
+.notecls {
+	BORDER-RIGHT: #b2b2b2 1px solid;
+        BORDER-TOP: #b2b2b2 1px solid;
+        PADDING-LEFT: 30px;
+        LIST-STYLE-POSITION: outside;
+        MARGIN: 0px;
+        FONT: 80% Arial,Helvetica,sans-serif;
+        BORDER-LEFT: #b2b2b2 1px solid;
+        COLOR: #000; PADDING-TOP: 15px;
+        BORDER-BOTTOM: #b2b2b2 1px solid;
+        HEIGHT: 48px
+}
+
+.footertext {
+	PADDING-RIGHT: 8px;
+        PADDING-LEFT: 8px;
+        FONT: 0.8em Arial,Helvetica,sans-serif;
+        COLOR: #fff;
+        TEXT-DECORATION: none
+}
+
+.kbd_heading {
+	PADDING-RIGHT: 0px;
+        PADDING-LEFT: 5px;
+        PADDING-BOTTOM: 0px;
+        MARGIN: 0px;
+        FONT: bold 100% Arial, Helvetica, sans-serif;
+        PADDING-TOP: 5px
+}
+.keyboardtbl {
+	PADDING-RIGHT: 0px;
+        PADDING-LEFT: 0px;
+        PADDING-BOTTOM: 0px;
+        MARGIN: 0px;
+        FONT: 85% Arial, Helvetica, sans-serif;
+        PADDING-TOP: 0px
+}
+.keyboardtblenb {
+	BORDER-RIGHT: #377292 1px solid;
+        PADDING-RIGHT: 8px;
+        BORDER-TOP: #377292 1px solid;
+        PADDING-LEFT: 8px;
+        FONT-WEIGHT: bold;
+        PADDING-BOTTOM: 3px;
+        VERTICAL-ALIGN: middle;
+        BORDER-LEFT: #377292 1px solid; 
+        CURSOR: pointer;
+        PADDING-TOP: 3px;
+        BORDER-BOTTOM: #377292 1px solid;
+        TEXT-ALIGN: center
+}
+.keyboardtbldis {
+	BORDER-RIGHT: #d9d8d8 1px solid; PADDING-RIGHT: 8px; BORDER-TOP: #d9d8d8 1px solid; PADDING-LEFT: 8px; FONT-WEIGHT: bold; PADDING-BOTTOM: 3px; VERTICAL-ALIGN: middle; BORDER-LEFT: #d9d8d8 1px solid; COLOR: #929290; PADDING-TOP: 3px; BORDER-BOTTOM: #d9d8d8 1px solid; BACKGROUND-COLOR: #edf2f2; TEXT-ALIGN: center
+}
+.vkb_login_heading {
+	FONT: 100% Arial, Helvetica, sans-serif
+}
+.vkb_login_heading SPAN {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bolder; FONT-SIZE: 140%; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #407cb9; PADDING-TOP: 0px
+}
+.vkb_tbl {
+	PADDING-RIGHT: 2px;
+	PADDING-LEFT: 2px;
+	PADDING-BOTTOM: 2px;
+	MARGIN: 0px;
+	FONT: 80% Arial, Helvetica, sans-serif;
+	VERTICAL-ALIGN: top;
+	PADDING-TOP: 2px;
+	text-align: center;
+}
+.vkb_tbl TD {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; PADDING-TOP: 4px
+}
+.vkb_content {
+	BORDER-RIGHT: #538ead 1px solid; 
+        PADDING-RIGHT: 5px;
+        BORDER-TOP: #538ead 1px solid;
+        PADDING-LEFT: 5px;
+        BACKGROUND:  #E0F0FE;
+        PADDING-BOTTOM: 5px;
+        MARGIN: 0px;
+        FONT: 80% Arial, Helvetica, sans-serif;
+        VERTICAL-ALIGN: top;
+        BORDER-LEFT: #538ead 1px solid;
+        COLOR: #36505e;
+        PADDING-TOP: 5px;
+        BORDER-BOTTOM: #538ead 1px solid
+}
+.vkb_loginsublinks {
+	PADDING-BOTTOM: 6px; 
+        FONT: 80% Arial,Helvetica,sans-serif;
+        COLOR: #003399
+}
+.vkb_loginsublinks A {
+	TEXT-DECORATION: underline
+}
+.vkb_errormsg {
+	FONT-WEIGHT: bold;
+        COLOR: red
+}
+
+.imptant {
+	FONT-SIZE: 135%; COLOR: #a00026
+}

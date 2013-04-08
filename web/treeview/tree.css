@@ -1,0 +1,36 @@
+/* 
+    Document   : tree
+    Created on : May 20, 2010, 7:09:49 PM
+    Author     : Nikhil
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+#leveldetails{
+position: absolute;
+top: 300px;
+left:200px;
+border-style: solid;
+border-width: 2px;
+text-align: center;
+width: 200px;
+visibility: hidden;
+padding: 10px;
+background-color: #fff;
+border-color: gray;
+}
+#leveldetails h4{
+color: olive;
+font-size: x-small;
+font-family: sans-serif;
+font-style: italic;
+}
+
