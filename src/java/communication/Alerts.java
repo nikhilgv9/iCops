@@ -13,7 +13,8 @@ import javax.servlet.http.*;
  *
  * @author Nikhil
  */
-public class Alerts {
+public class Alerts 
+{
  static MsgDetails alert=null;
     static int done=0;
 
